@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\AxonAPI.Application\AxonAPI.Application.csproj" />
     <ProjectReference Include="..\..\Core\AxonAPI.Domain\AxonAPI.Domain.csproj" />
   </ItemGroup>
 

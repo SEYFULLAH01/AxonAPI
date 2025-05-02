@@ -1,4 +1,6 @@
-﻿using AxonAPI.Persistence.Context;
+﻿using AxonAPI.Application.Interfaces.Repositories;
+using AxonAPI.Persistence.Context;
+using AxonAPI.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +18,10 @@ namespace AxonAPI.Persistence
         {
             services.AddDbContext<AppDbContext>(opt =>
             opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
+            services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+
         }
     }
 }
