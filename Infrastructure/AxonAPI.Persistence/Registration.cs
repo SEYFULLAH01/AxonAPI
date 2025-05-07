@@ -1,6 +1,8 @@
 ﻿using AxonAPI.Application.Interfaces.Repositories;
+using AxonAPI.Application.Interfaces.UnitOfWorks;
 using AxonAPI.Persistence.Context;
 using AxonAPI.Persistence.Repositories;
+using AxonAPI.Persistence.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +24,7 @@ namespace AxonAPI.Persistence
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
 
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }
