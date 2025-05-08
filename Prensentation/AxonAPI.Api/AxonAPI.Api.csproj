@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\AxonAPI.Mapper\AxonAPI.Mapper.csproj" />
     <ProjectReference Include="..\..\Infrastructure\AxonAPI.Persistence\AxonAPI.Persistence.csproj" />
   </ItemGroup>
 

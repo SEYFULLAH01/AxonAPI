@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35828.75 d17.13
+VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxonAPI.Persistence", "Infrastructure\AxonAPI.Persistence\AxonAPI.Persistence.csproj", "{63F0FDE1-4105-45ED-BB64-AA176AD6B7B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxonAPI.Api", "Prensentation\AxonAPI.Api\AxonAPI.Api.csproj", "{0C803F7F-7383-4BE6-93D9-E3D2C48975D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AxonAPI.Mapper", "AxonAPI.Mapper\AxonAPI.Mapper.csproj", "{A19D07D6-9728-409E-B25B-22A1A7DECFD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0C803F7F-7383-4BE6-93D9-E3D2C48975D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C803F7F-7383-4BE6-93D9-E3D2C48975D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C803F7F-7383-4BE6-93D9-E3D2C48975D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A19D07D6-9728-409E-B25B-22A1A7DECFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A19D07D6-9728-409E-B25B-22A1A7DECFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A19D07D6-9728-409E-B25B-22A1A7DECFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A19D07D6-9728-409E-B25B-22A1A7DECFD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
