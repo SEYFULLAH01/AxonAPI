@@ -1,4 +1,7 @@
-﻿using AxonAPI.Application.Features.Products.Queries.GetAllProducts;
+﻿using AxonAPI.Application.Features.Products.Command.CreateProduct;
+using AxonAPI.Application.Features.Products.Command.DeleteProduct;
+using AxonAPI.Application.Features.Products.Command.UpdateProduct;
+using AxonAPI.Application.Features.Products.Queries.GetAllProducts;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -22,6 +25,24 @@ namespace AxonAPI.Api.Controllers
             var response = await mediator.Send(new GetAllProductsQueryRequest());
 
             return Ok(response);
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct(CreateProductCommandRequest request)
+        {
+            await mediator.Send(request);
+            return Ok();
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest request)
+        {
+            await mediator.Send(request);
+            return Ok();
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteProduct(DeleteProductCommandRequest request)
+        {
+            await mediator.Send(request);
+            return Ok();
         }
     }
 }
