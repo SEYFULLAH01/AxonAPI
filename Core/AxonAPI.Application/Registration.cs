@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AxonAPI.Application.Exceptions;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System;
@@ -16,6 +17,7 @@ namespace AxonAPI.Application
         public static void AddApplication(this IServiceCollection services)
         {
             var assembly = Assembly.GetExecutingAssembly();
+            services.AddTransient<ExceptionMiddleware>();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 
         }

@@ -1,6 +1,7 @@
 using AxonAPI.Persistence;
 using AxonAPI.Application;
 using AxonAPI.Mapper;
+using AxonAPI.Application.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +36,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.ConfigureExceptionHandlingMiddleware();
 app.UseAuthorization();
 
 app.MapControllers();
