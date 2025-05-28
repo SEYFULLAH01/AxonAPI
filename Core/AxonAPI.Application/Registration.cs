@@ -1,14 +1,8 @@
 ﻿using AxonAPI.Application.Exceptions;
-using MediatR;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AxonAPI.Application
 {
@@ -20,6 +14,8 @@ namespace AxonAPI.Application
             services.AddTransient<ExceptionMiddleware>();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 
+            services.AddValidatorsFromAssembly(assembly);
+            ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("tr");
         }
     }
 }
